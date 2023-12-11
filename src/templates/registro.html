@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/Obelisco (2).png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/registro.css') }}">
+  </head>
+  <body>
+    <header>
+      <div class="contentLogo">
+        <img class="logo" src="/static/img/logo.svg" alt="logo" />
+     
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="{{ url_for('index') }}">Inicio</a></li>
+          <li><a href="{{ url_for('ventas') }}">Ventas</a></li>
+          <li><a href="{{ url_for('alquiler') }}">Alquiler</a></li>
+          <li><a href="{{ url_for('proyectos') }}">Proyectos</a></li>
+          <li><a href="{{ url_for('registro') }}">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <article>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <h2>Registro de Usuario</h2>
+        <form action="/api/usuarios" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+  
+        <!-- Campos adicionales -->
+            <label for="tipo_registro">Tipo de Registro:</label>
+              <select id="tipo_registro" name="tipo_registro">
+              <option value="ventas">Ventas</option>
+              <option value="alquiler">Alquiler</option>
+              <option value="compra">Compra</option>
+            </select>
+  
+           <label for="tipo_propiedad">Tipo de Propiedad:</label>
+           <select id="tipo_propiedad" name="tipo_propiedad">
+              <option value="casa">Casa</option>
+              <option value="apartamento">Apartamento</option>
+              <option value="proyecto">Proyecto</option>
+           </select>
+  
+              <button type="submit">Registrar</button>
+    </form>
+    <!-- Agrega esto después del formulario -->
+    <div id="mensaje-registro" style="display: none; color: green; margin-top: 10px;">
+  <!-- El mensaje de registro exitoso se mostrará aquí -->
+    </div>
+
+    </article>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer class="fila">
+        <div class="col-33">
+            <p>Obelisco Real State</p>
+            <p class="flex-start">
+                <img class="m-r-small" src="/static/img/map.svg" alt="icono de mapa">
+                Av. 9 de Julio , C1043 CABA
+                Buenos Aires
+            </p>
+
+            <p class="flex-start">
+                <img class="m-r-small" src="/static/img/phone.svg" alt="icono de telefono">
+                +54952099000
+            </p>
+            <p class="flex-start">
+                <img class="m-r-small" src="/static/img/mail.svg" alt="icono de email">
+                info@Obelisco.com
+            </p>
+        </div>
+       
+        <div class="col-33">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2761.438715185998!2d-58.383606807847904!3d-34.606119479381235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1693918985117!5m2!1ses-419!2sar"
+                width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-33">
+            <div class="flex-around">
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img class="rrss" src="/static/img/facebook.png" alt="icono de facebook">
+                </a>
+                <a href="https://twitter.com/?lang=es" target="_blank">
+                    <img class="rrss" src="/static/img/twitwer nuevo.jpeg" alt="inoco de twitter">
+                </a>
+                <a href="https://web.whatsapp.com/" target="_blank">
+                    <img class="rrss" src="/static/img/whatsapp.png" alt="icono de whatsapp">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img class="rrss" src="/static/img/instagram.png" alt="icono de instagram">
+                </a>
+
+
+
+            </div>
+            <div class="flex-around m-t">
+                <a href="contacto.html#aviso">Aviso legal</a>
+                <a href="contacto.html#cookies">Politica de cookies</a>
+            </div>
+            <p class="copyright m-t">&copy; Obelisco Real State All rights reserved</p>
+        </div>
+    </footer>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          const form = document.querySelector('form');
+          const mensajeRegistro = document.getElementById('mensaje-registro');
+  
+          form.addEventListener('submit', async function (event) {
+              event.preventDefault();
+  
+              const formData = new FormData(form);
+              const jsonData = {};
+              formData.forEach((value, key) => {
+                  jsonData[key] = value;
+              });
+  
+              const response = await fetch('/api/usuarios', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(jsonData),
+              });
+  
+              const result = await response.json();
+  
+              // Mostrar el mensaje de registro
+              mensajeRegistro.innerText = result.mensaje;
+              mensajeRegistro.style.color = result.error ? 'red' : 'green';  // Cambiar color según si hay un error
+              mensajeRegistro.style.display = 'block';
+          });
+      });
+  </script>
+  
+  
+  </body>
+</html>

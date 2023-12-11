@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyectos</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/Obelisco (2).png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_01.css') }}">
+  </head>
+
+<body>
+
+    <header class="transparente">
+        <img class="logo" src="/static/img/logo.svg" alt="logo" />
+       
+     <nav>
+          <a href="{{ url_for('index') }}">Inicio</a>
+          <a href="{{ url_for('ventas') }}">Ventas</a>
+          <a href="{{ url_for('alquiler') }}">Alquiler</a>
+          <a href="{{ url_for('proyectos') }}">Proyectos</a> 
+          <a href="{{ url_for('registro') }}">Contacto</a>
+      </nav>
+    </header>
+    <br>
+    <br>
+    <div id="burger">
+        <div class="barra superior"></div>
+        <div class="barra media"></div>
+        <div class="barra inferior"></div>
+    </div>
+    <div class="menu">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <hr>
+            <a href="Ventas.html">Ventas</a>
+            <hr>
+            <a href="alquiler.html">Alquiler</a>
+            <hr>
+            <a href="contacto_nuevo.html">Contacto</a>
+        </nav>
+        <p class="copyright">&copy;ACME</p>
+    </div>
+
+    <div class="filas">
+
+        <div class="card">
+            <img src="/static/img/thumb10.jpg" alt="imagen de casa">
+            <div class="footer-card">
+                <div>
+                    <p>Villa en Los Altos</p>
+                    <p>2.000.000 $</p>
+                </div>
+                <a href="/propiedad.html">Mas informacion</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="/static/img/thumb9.jpg" alt="imagen de casa">
+            <div class="footer-card">
+                <div>
+                    <p>Villa en Los Altos</p>
+                    <p>2.000.000 $</p>
+                </div>
+                <a href="/propiedad2.html">Mas informacion</a>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="/static/img/thumb8.jpg" alt="imagen de casa">
+            <div class="footer-card">
+                <div>
+                    <p>Villa en Los Altos</p>
+                    <p>2.000.000 $</p>
+                </div>
+                <a href="/propiedad3.html">Mas informacion</a>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="/static/img/thumb6.jpg" alt="imagen de casa">
+            <div class="footer-card">
+                <div>
+                    <p>Villa en Los Altos</p>
+                    <p>2.000.000 $</p>
+                </div>
+                <a href="/propiedad4.html">Mas informacion</a>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="/static/img/thumb5.jpg" alt="imagen de casa">
+            <div class="footer-card">
+                <div>
+                    <p>Villa en Los Altos</p>
+                    <p>2.000.000 $</p>
+                </div>
+                <a href="/propiedad5.html">Mas informacion</a>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="/static/img/thumb3.jpg" alt="imagen de casa">
+            <div class="footer-card">
+                <div>
+                    <p>Villa en Los Altos</p>
+                    <p>2.000.000 $</p>
+                </div>
+                <a href="/propiedad6.html">Mas informacion</a>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="/static/img/thumb2.jpg" alt="imagen de casa">
+            <div class="footer-card">
+                <div>
+                    <p>Villa en Los Altos</p>
+                    <p>2.000.000 $</p>
+                </div>
+                <a href="/propiedad7.html">Mas informacion</a>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="/static/img/thumb1.jpeg" alt="imagen de casa">
+            <div class="footer-card">
+                <div>
+                    <p>Villa en Los Altos</p>
+                    <p>2.000.000 $</p>
+                </div>
+                <a href="/propiedad8.html">Mas informacion</a>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <img src="#" alt="">
+    <footer class="fila">
+        <div class="col-33">
+            <p>Obelisco Real State</p>
+            <p class="flex-start">
+                <img class="m-r-small" src="/static/img/map.svg" alt="icono de mapa">
+                Av. 9 de Julio , C1043 CABA
+                Buenos Aires
+            </p>
+
+            <p class="flex-start">
+                <img class="m-r-small" src="/static/img/phone.svg" alt="icono de telefono">
+                +54952099000
+            </p>
+            <p class="flex-start">
+                <img class="m-r-small" src="/static/img/mail.svg" alt="icono de email">
+                info@Obelisco.com
+            </p>
+        </div>
+       
+        <div class="col-33">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2761.438715185998!2d-58.383606807847904!3d-34.606119479381235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1693918985117!5m2!1ses-419!2sar"
+                width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-33">
+            <div class="flex-around">
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img class="rrss" src="/static/img/facebook.png" alt="icono de facebook">
+                </a>
+                <a href="https://twitter.com/?lang=es" target="_blank">
+                    <img class="rrss" src="/static/img/twitwer nuevo.jpeg" alt="inoco de twitter">
+                </a>
+                <a href="https://web.whatsapp.com/" target="_blank">
+                    <img class="rrss" src="/static/img/whatsapp.png" alt="icono de whatsapp">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img class="rrss" src="/static/img/instagram.png" alt="icono de instagram">
+                </a>
+
+
+
+            </div>
+            <div class="flex-around m-t">
+                <a href="contacto.html#aviso">Aviso legal</a>
+                <a href="contacto.html#cookies">Politica de cookies</a>
+            </div>
+            <p class="copyright m-t">&copy; Obelisco Real State All rights reserved</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
