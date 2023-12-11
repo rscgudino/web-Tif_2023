@@ -1,0 +1,354 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Estilos Generales*/
+html {
+    font-size: 20px;
+
+}
+
+@media (max-width :440px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+           
+img {
+    max-width: 100%;
+}
+
+p {
+    margin-bottom: 0.8rem;
+}
+body {
+    font-size: "Avenir", sans-serif;
+    color: #67666e;
+    background-image: url(''); 
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+ header {
+    font-size: "Avenir", sans-serif;
+    background-color: #333333a6;
+    box-shadow: 1.5px 1.5px 4px #a97c50;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    transition: 600ms ease-in-out all;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+h1 {
+    font-size: "Avenir", sans-serif;
+    background-color:#a97c50;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.822);
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 36px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+    background-color: #14121271;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.transparente {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+header img {
+    height: 60px;
+    width: auto;
+}
+
+header nav a {
+    padding: 0,5px;
+    font-size: 20px;
+    
+    color: #fff;
+    font-weight: normal;
+    margin-left: 1em;
+    transition: 300ms ease-in-out all;
+}
+
+header.transparente nav a {
+    color: black
+}
+
+header nav a.activo,
+header nav a:hover {
+    color: #a97c50;
+    font-weight: bold;
+}
+
+header.transparente nav a.activo,
+header.transparente nav a:hover {
+    color: #a97c50;
+}
+
+.hero-logo  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: none;
+    opacity: 1;
+    width: 20%;
+    height: auto;
+    border-radius: 20rem;
+}
+.menu {
+    display:contents;
+    flex-direction:row;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0px 10px;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu ul li.activo,
+.menu ul li:hover {
+    color: #a97c50;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu li {
+    margin: 0px 10px;
+    border-radius: 10px;
+    color: #a97c50;
+    padding: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+
+
+
+/* -------------------------------------Formulario de registro de usuario */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #131111;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.error {
+    color: rgb(24, 21, 21);
+    margin-top: 5px;
+}
+
+/* Botón de registro más llamativo con efecto de hover */
+.button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+
+/* Mejora de estilo general */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    color: #333;
+   
+    background-color:#e7ddd275; 
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+/* /* Estilo mejorado para los selectores de ventas */
+select {
+    width: 100%;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    border: 2px solid #0d0d0e2d; /* Color del borde */
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: rgba(250, 249, 247, 0.8);
+    color: #333; /* Color del texto */
+}
+
+select:hover {
+    border-color: ; /* Cambia el color del borde al pasar el mouse */
+}
+
+select:focus {
+    outline: none; /* Elimina el contorno predeterminado al enfocarse */
+    border-color: #1f7cb996; /* Cambia el color del borde al enfocarse */
+}
+
+input[type="submit"] {
+    background-color: #2ecc71; /* Color de fondo del botón */
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: #27ae60; /* Cambia el color de fondo del botón al pasar el mouse */
+    transform: scale(1.05);
+}
+/*----------------------------------------------------------------------------------*/
+
+
+
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #333333e3;
+    color: #fff;
+    text-align: center;
+    padding: 20px; /* Ajusta el padding según tu preferencia */
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.col-33 {
+    width: 33.33333%;
+    padding: 0.5rem 1rem;
+}
+
+@media (max-width: 768px) {
+    .col-33 {
+        width: 100%;
+    }
+}
+
+.iconFooter {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+
+p {
+    color: #fff;
+    font-size: 15px; /* Tamaño de fuente ajustado */
+    margin: 5px 0; /* Ajusta el margen según tu preferencia */
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.m-t {
+    margin-top: 1rem;
+}
+
+/* Iconos de redes sociales */
+.rrss {
+    width: 23px; /* Ajusta el tamaño de los iconos según tu preferencia */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.rrss:hover {
+    transform: scale(1.2); /* Efecto de escala al pasar el ratón */
+}
+
+/* Ajustes para el mapa en el último bloque */
+iframe {
+    width: 100%;
+    height: 200px; /* Ajusta la altura del mapa según tu preferencia */
+    border: 0;
+    margin-top: 1rem;
+}
+
+/* Ajustes para los enlaces en el bloque de aviso legal y política de cookies */
+.flex-around.m-t a {
+    color: #c01e1e; /* Color de los enlaces */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.flex-around.m-t a:hover {
+    color: #a97c50; /* Color al pasar el ratón por encima */
+    font-weight: bold;
+}
