@@ -85,6 +85,10 @@ def proyectos():
 def ventas():
     return render_template('ventas.html')
 
+@app.route('/equipo')
+def equipo():
+    return render_template('equipo.html')
+
 @app.route('/registro')
 def registro():
     return render_template('registro.html')

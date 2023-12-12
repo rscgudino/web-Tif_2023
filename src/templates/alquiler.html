@@ -11,13 +11,14 @@
     <header class="transparente">
         <img class="logo" src="/static/img/logo.svg" alt="logo" />
        
-     <nav>
+       <nav>
           <a href="{{ url_for('index') }}">Inicio</a>
           <a href="{{ url_for('ventas') }}">Ventas</a>
           <a href="{{ url_for('alquiler') }}">Alquiler</a>
           <a href="{{ url_for('proyectos') }}">Proyectos</a> 
+          <a href="{{ url_for('equipo') }}">Equipo</a>
           <a href="{{ url_for('registro') }}">Contacto</a>
-      </nav>
+       </nav>
     </header>
     <br>
     <br>
@@ -28,13 +29,12 @@
     </div>
     <div class="menu">
         <nav>
-            <a href="index.html">Inicio</a>
-            <hr>
-            <a href="Ventas.html">Ventas</a>
-            <hr>
-            <a href="alquiler.html">Alquiler</a>
-            <hr>
-            <a href="contacto_nuevo.html">Contacto</a>
+            <a href="{{ url_for('index') }}">Inicio</a>
+            <a href="{{ url_for('ventas') }}">Ventas</a>
+            <a href="{{ url_for('alquiler') }}">Alquiler</a>
+            <a href="{{ url_for('proyectos') }}">Proyectos</a> 
+            <a href="{{ url_for('equipo') }}">Equipo</a>
+            <a href="{{ url_for('registro') }}">Contacto</a>
         </nav>
         <p class="copyright">&copy;ACME</p>
     </div>
@@ -162,7 +162,7 @@
             +54952099000
         </p>
         <p class="flex-start">
-            <img class="m-r-small" src="/img/mail.svg" alt="icono de email">
+            <img class="m-r-small" src="/static/img/mail.svg" alt="icono de email">
             info@Obelisco.com
         </p>
     </div>

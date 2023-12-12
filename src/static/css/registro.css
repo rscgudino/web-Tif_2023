@@ -174,8 +174,8 @@ form {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f4f4f4;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #4b484869;
+    box-shadow: 0 0 10px rgba(148, 20, 20, 0.1);
     border-radius: 8px;
 }
 
@@ -238,7 +238,7 @@ select {
 }
 
 select:hover {
-    border-color: ; /* Cambia el color del borde al pasar el mouse */
+   /* Cambia el color del borde al pasar el mouse */
 }
 
 select:focus {
